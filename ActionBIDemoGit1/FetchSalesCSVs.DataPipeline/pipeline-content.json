@@ -1,5 +1,140 @@
 {
   "properties": {
-    "activities": []
+    "activities": [
+      {
+        "type": "Copy",
+        "typeProperties": {
+          "source": {
+            "type": "BinarySource",
+            "formatSettings": {
+              "type": "BinaryReadSettings"
+            },
+            "storeSettings": {
+              "type": "HttpReadSettings",
+              "requestMethod": "GET"
+            },
+            "datasetSettings": {
+              "type": "Binary",
+              "typeProperties": {
+                "location": {
+                  "type": "HttpServerLocation",
+                  "relativeUrl": "RAW-Sales.csv"
+                }
+              },
+              "externalReferences": {
+                "connection": "06417d03-a7bb-4651-887f-42bae12e0dd7"
+              },
+              "annotations": []
+            }
+          },
+          "sink": {
+            "type": "BinarySink",
+            "storeSettings": {
+              "type": "LakehouseWriteSettings"
+            },
+            "datasetSettings": {
+              "type": "Binary",
+              "typeProperties": {
+                "location": {
+                  "type": "LakehouseLocation",
+                  "folderPath": "Files",
+                  "fileName": "Sales.csv"
+                }
+              },
+              "linkedService": {
+                "name": "ActionBIDemoPipelineLakeHouse",
+                "properties": {
+                  "type": "Lakehouse",
+                  "typeProperties": {
+                    "artifactId": "d26f6631-ec4e-a8a1-4d39-3861f6d364a1",
+                    "workspaceId": "00000000-0000-0000-0000-000000000000",
+                    "rootFolder": "Files"
+                  },
+                  "annotations": []
+                }
+              },
+              "annotations": []
+            }
+          },
+          "enableStaging": false
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "GetSales",
+        "dependsOn": []
+      },
+      {
+        "type": "Copy",
+        "typeProperties": {
+          "source": {
+            "type": "BinarySource",
+            "formatSettings": {
+              "type": "BinaryReadSettings"
+            },
+            "storeSettings": {
+              "type": "HttpReadSettings",
+              "requestMethod": "GET"
+            },
+            "datasetSettings": {
+              "type": "Binary",
+              "typeProperties": {
+                "location": {
+                  "type": "HttpServerLocation",
+                  "relativeUrl": "RAW-Customer.csv"
+                }
+              },
+              "externalReferences": {
+                "connection": "06417d03-a7bb-4651-887f-42bae12e0dd7"
+              },
+              "annotations": []
+            }
+          },
+          "sink": {
+            "type": "BinarySink",
+            "storeSettings": {
+              "type": "LakehouseWriteSettings"
+            },
+            "datasetSettings": {
+              "type": "Binary",
+              "typeProperties": {
+                "location": {
+                  "type": "LakehouseLocation",
+                  "folderPath": "Files",
+                  "fileName": "Customer.csv"
+                }
+              },
+              "linkedService": {
+                "name": "ActionBIDemoPipelineLakeHouse",
+                "properties": {
+                  "type": "Lakehouse",
+                  "typeProperties": {
+                    "artifactId": "d26f6631-ec4e-a8a1-4d39-3861f6d364a1",
+                    "workspaceId": "00000000-0000-0000-0000-000000000000",
+                    "rootFolder": "Files"
+                  },
+                  "annotations": []
+                }
+              },
+              "annotations": []
+            }
+          },
+          "enableStaging": false
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "GetCustomer",
+        "dependsOn": []
+      }
+    ]
   }
 }
