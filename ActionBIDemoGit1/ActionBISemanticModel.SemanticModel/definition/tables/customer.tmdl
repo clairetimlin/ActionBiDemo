@@ -1,6 +1,6 @@
 table customer
 	lineageTag: b0a7a4c1-2e36-4596-a36a-759dd3069c47
-	sourceLineageTag: [raw].[customer]
+	sourceLineageTag: [PostETL].[customer]
 
 	column CustomerKey
 		dataType: string
