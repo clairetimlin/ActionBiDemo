@@ -94,6 +94,18 @@ df = spark.sql(f"""
                 END AS AdjustedQuantity
             FROM {schema_name}.sales""")
 df.write.mode("overwrite").option("overwriteSchema", "true").format("delta").saveAsTable(f"{schema_name_post_ETL}.sales")  
+df= spark.sql(f"SELECT * FROM {schema_name}.customer")
+df.write.mode("overwrite").option("overwriteSchema", "true").format("delta").saveAsTable(f"{schema_name_post_ETL}.customer")  
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
+# CELL ********************
+
 
 # METADATA ********************
 
