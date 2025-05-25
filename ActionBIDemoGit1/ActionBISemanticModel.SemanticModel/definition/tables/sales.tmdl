@@ -1,6 +1,6 @@
 table sales
 	lineageTag: b9aeecc1-5137-4d49-af75-b2d149aecaf8
-	sourceLineageTag: [raw].[sales]
+	sourceLineageTag: [PostETL].[sales]
 
 	column OrderNumber
 		dataType: string
