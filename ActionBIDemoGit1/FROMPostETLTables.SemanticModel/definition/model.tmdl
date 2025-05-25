@@ -13,8 +13,11 @@ annotation PBIDesktopVersion = 2.144.7678.1 (Main)+03ff7a4d52fc4bc95d07de5a5c724
 
 annotation PBI_QueryOrder = ["DatabaseQuery"]
 
+annotation PBI_ProTooling = ["WebModelingEdit"]
+
 ref table sales
 ref table customer
+ref table MeasuresTable
 
 ref cultureInfo en-US
 

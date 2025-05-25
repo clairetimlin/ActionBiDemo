@@ -73,12 +73,15 @@ table sales
 		annotation SummarizationSetBy = Automatic
 
 	column Quantity
-		dataType: string
+		dataType: int64
+		formatString: 0
 		sourceProviderType: varchar(8000)
 		lineageTag: 1da2463c-5ac4-43e0-b3f7-27cb0a0d69ce
 		sourceLineageTag: Quantity
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: Quantity
+
+		changedProperty = DataType
 
 		annotation SummarizationSetBy = Automatic
 
@@ -133,12 +136,15 @@ table sales
 		annotation SummarizationSetBy = Automatic
 
 	column AdjustedQuantity
-		dataType: string
+		dataType: int64
+		formatString: 0
 		sourceProviderType: varchar(8000)
 		lineageTag: 2ef8f65f-60ef-409d-8808-cd67af5c1251
 		sourceLineageTag: AdjustedQuantity
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: AdjustedQuantity
+
+		changedProperty = DataType
 
 		annotation SummarizationSetBy = Automatic
 
