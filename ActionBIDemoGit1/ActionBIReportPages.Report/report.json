@@ -20,7 +20,7 @@
   "sections": [
     {
       "config": "{}",
-      "displayName": "SalesAmountByCustomerGeography",
+      "displayName": "SalesAmountByCustomerRegion",
       "displayOption": 1,
       "filters": "[]",
       "height": 720.00,
