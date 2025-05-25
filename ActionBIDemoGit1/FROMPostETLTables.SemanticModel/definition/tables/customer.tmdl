@@ -1,0 +1,143 @@
+table customer
+	lineageTag: 82639c0c-8326-454c-bd2a-496e4737d1b9
+	sourceLineageTag: [PostETL].[customer]
+
+	column CustomerKey
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 19246aaa-f290-4155-bfcc-2c5a9454657a
+		sourceLineageTag: CustomerKey
+		summarizeBy: none
+		sourceColumn: CustomerKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column Gender
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: d4cf5bbf-e0b9-4833-926a-7dc08db756cf
+		sourceLineageTag: Gender
+		summarizeBy: none
+		sourceColumn: Gender
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 1045edc1-7ec2-4948-81af-8a8eb91d6216
+		sourceLineageTag: Name
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Address
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 96e90cae-2c5f-4684-8b77-af3e9416aa74
+		sourceLineageTag: Address
+		summarizeBy: none
+		sourceColumn: Address
+
+		annotation SummarizationSetBy = Automatic
+
+	column City
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: fba54154-71b3-4c1a-85d3-0017fa634ded
+		sourceLineageTag: City
+		summarizeBy: none
+		sourceColumn: City
+
+		annotation SummarizationSetBy = Automatic
+
+	column StateCode
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 659624db-1ba0-46cf-a438-beb1f75dfe3b
+		sourceLineageTag: StateCode
+		summarizeBy: none
+		sourceColumn: StateCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column State
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 40a4c074-63e0-4707-b195-640f32e96d3d
+		sourceLineageTag: State
+		summarizeBy: none
+		sourceColumn: State
+
+		annotation SummarizationSetBy = Automatic
+
+	column ZipCode
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: c31eea7c-84e3-432f-a392-870b2ff5a5c5
+		sourceLineageTag: ZipCode
+		summarizeBy: none
+		sourceColumn: ZipCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column CountryCode
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 9185c580-924f-465d-8dcf-b0ffd6da10be
+		sourceLineageTag: CountryCode
+		summarizeBy: none
+		sourceColumn: CountryCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column Country
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 44db5e8e-75b9-4bb7-869f-ddca2ff54e68
+		sourceLineageTag: Country
+		summarizeBy: none
+		sourceColumn: Country
+
+		annotation SummarizationSetBy = Automatic
+
+	column Continent
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: c6e4ca65-c332-4380-a6e2-aac3b968d298
+		sourceLineageTag: Continent
+		summarizeBy: none
+		sourceColumn: Continent
+
+		annotation SummarizationSetBy = Automatic
+
+	column Birthday
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: a2fb733a-9fbd-452b-b691-34a8468863bd
+		sourceLineageTag: Birthday
+		summarizeBy: none
+		sourceColumn: Birthday
+
+		annotation SummarizationSetBy = Automatic
+
+	column Age
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: c2bc1453-5083-4c24-808d-4e9273ca28fd
+		sourceLineageTag: Age
+		summarizeBy: none
+		sourceColumn: Age
+
+		annotation SummarizationSetBy = Automatic
+
+	partition customer = entity
+		mode: directLake
+		source
+			entityName: customer
+			schemaName: PostETL
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

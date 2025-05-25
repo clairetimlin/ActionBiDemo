@@ -1,0 +1,153 @@
+table sales
+	lineageTag: a6684947-973b-42a5-8348-6a53118559db
+	sourceLineageTag: [PostETL].[sales]
+
+	column OrderNumber
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 8c88f48b-6197-4ed4-a8ec-040f6d57014b
+		sourceLineageTag: OrderNumber
+		summarizeBy: none
+		sourceColumn: OrderNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column LineNumber
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 2e4e382d-0e5e-425c-b47a-f3f0a43cce6f
+		sourceLineageTag: LineNumber
+		summarizeBy: none
+		sourceColumn: LineNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrderDate
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 84054f4f-8058-4662-8973-e1b4850c8762
+		sourceLineageTag: OrderDate
+		summarizeBy: none
+		sourceColumn: OrderDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column DeliveryDate
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 675ea4d9-2f6f-4cd6-b9eb-bf8b9b80ea65
+		sourceLineageTag: DeliveryDate
+		summarizeBy: none
+		sourceColumn: DeliveryDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerKey
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: c5106920-8195-4d77-859d-3329d596e2e3
+		sourceLineageTag: CustomerKey
+		summarizeBy: none
+		sourceColumn: CustomerKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column StoreKey
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: a629a4b6-cc13-4c1c-9e8b-d4e715b2ad20
+		sourceLineageTag: StoreKey
+		summarizeBy: none
+		sourceColumn: StoreKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductKey
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 9c837ece-28c2-426d-8093-b3ea3300c487
+		sourceLineageTag: ProductKey
+		summarizeBy: none
+		sourceColumn: ProductKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quantity
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 1da2463c-5ac4-43e0-b3f7-27cb0a0d69ce
+		sourceLineageTag: Quantity
+		summarizeBy: none
+		sourceColumn: Quantity
+
+		annotation SummarizationSetBy = Automatic
+
+	column UnitPrice
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: cd4e5a64-c0d5-42e3-b04a-df32c17ae8bc
+		sourceLineageTag: UnitPrice
+		summarizeBy: none
+		sourceColumn: UnitPrice
+
+		annotation SummarizationSetBy = Automatic
+
+	column NetPrice
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 5ab56559-82fa-49cb-9341-7b367f96b275
+		sourceLineageTag: NetPrice
+		summarizeBy: none
+		sourceColumn: NetPrice
+
+		annotation SummarizationSetBy = Automatic
+
+	column UnitCost
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 5da326b0-95e8-48c1-99b1-392ccb161938
+		sourceLineageTag: UnitCost
+		summarizeBy: none
+		sourceColumn: UnitCost
+
+		annotation SummarizationSetBy = Automatic
+
+	column CurrencyCode
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 3521a377-3638-47c0-861a-4d6b66e49cd4
+		sourceLineageTag: CurrencyCode
+		summarizeBy: none
+		sourceColumn: CurrencyCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column ExchangeRate
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: e9ff6740-cb2d-4b4a-bd3b-c8efd8f74b25
+		sourceLineageTag: ExchangeRate
+		summarizeBy: none
+		sourceColumn: ExchangeRate
+
+		annotation SummarizationSetBy = Automatic
+
+	column AdjustedQuantity
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 2ef8f65f-60ef-409d-8808-cd67af5c1251
+		sourceLineageTag: AdjustedQuantity
+		summarizeBy: none
+		sourceColumn: AdjustedQuantity
+
+		annotation SummarizationSetBy = Automatic
+
+	partition sales = entity
+		mode: directLake
+		source
+			entityName: sales
+			schemaName: PostETL
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+
