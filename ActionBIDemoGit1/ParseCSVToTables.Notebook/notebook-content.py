@@ -64,16 +64,36 @@ for csv_file in csv_files:
     #df.columns is a list of the columns in the dataframe
     #reassign df which esenatial means we have all the same datea but the column names are changed
     df = df.select([F.col(col).alias(col.replace(' ', '')) for col in df.columns])
-   
     # Write to the target schema, replacing the existing table
     # format("delta") means we are using the delta format, which is a format that allows for incremental updates
     # f stands for format string, which is a way to format strings in python
     # saveAsTable means we are saving the dataframe as a table in the database
 
-    df.write.mode("overwrite").option("overwriteSchema", "true").format("delta").saveAsTable(f"raw.{table_name}")    
+    df.write.mode("overwrite").option("overwriteSchema", "true").format("delta").saveAsTable(f"{schema_name}.{table_name}")    
     #so at the end of this phython script we have 4 tables in the raw sql schema, stored in the lakehouse we created, within the workspace we created.
     # note this is a spark table, not a sql table
     # the tables are customer, sales, product and store
+
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
+# CELL ********************
+
+schema_name_post_ETL = "PostETL"
+
+spark.sql(f"CREATE SCHEMA IF NOT EXISTS {schema_name_post_ETL}")
+df = spark.sql(f"""
+            SELECT *, 
+                CASE WHEN Quantity =1 THEN 0 
+                    ELSE Quantity
+                END AS AdjustedQuantity
+            FROM {schema_name}.sales""")
+df.write.mode("overwrite").option("overwriteSchema", "true").format("delta").saveAsTable(f"{schema_name_post_ETL}.sales")  
 
 # METADATA ********************
 
