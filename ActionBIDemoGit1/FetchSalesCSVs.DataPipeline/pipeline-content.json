@@ -42,11 +42,11 @@
                 }
               },
               "linkedService": {
-                "name": "ActionBIDemoPipelineLakeHouse",
+                "name": "ActionBILakehouse",
                 "properties": {
                   "type": "Lakehouse",
                   "typeProperties": {
-                    "artifactId": "d26f6631-ec4e-a8a1-4d39-3861f6d364a1",
+                    "artifactId": "6e20a81a-ffee-ac3f-4604-32ad54e08e8d",
                     "workspaceId": "00000000-0000-0000-0000-000000000000",
                     "rootFolder": "Files"
                   },
@@ -109,11 +109,11 @@
                 }
               },
               "linkedService": {
-                "name": "ActionBIDemoPipelineLakeHouse",
+                "name": "ActionBILakehouse",
                 "properties": {
                   "type": "Lakehouse",
                   "typeProperties": {
-                    "artifactId": "d26f6631-ec4e-a8a1-4d39-3861f6d364a1",
+                    "artifactId": "6e20a81a-ffee-ac3f-4604-32ad54e08e8d",
                     "workspaceId": "00000000-0000-0000-0000-000000000000",
                     "rootFolder": "Files"
                   },

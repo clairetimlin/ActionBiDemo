@@ -1,0 +1,4 @@
+relationship 470ee892-a05b-3748-a2a7-0238f1cd7add
+	fromColumn: sales.CustomerKey
+	toColumn: customer.CustomerKey
+

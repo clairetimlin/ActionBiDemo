@@ -1,0 +1,29 @@
+table MeasuresTable
+	lineageTag: 8182ce2a-4e60-42ca-89ab-098747301b1c
+
+	measure SalesAmount =
+			
+			SUMX(
+			    sales,
+			    sales[Quantity]*sales[NetPrice]
+			)
+		lineageTag: 6aabc4c6-342c-44bf-8d21-33de449e6b55
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Value
+		isHidden
+		formatString: 0
+		lineageTag: 5bd8f71a-4820-40b4-b622-f499146164ac
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Value]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition MeasuresTable = calculated
+		mode: import
+		source = {1}
+
+	annotation PBI_Id = f77d1230a7324ce395c298585288011c
+

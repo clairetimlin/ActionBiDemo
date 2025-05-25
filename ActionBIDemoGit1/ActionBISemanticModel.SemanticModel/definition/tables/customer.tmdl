@@ -1,0 +1,160 @@
+table customer
+	lineageTag: b0a7a4c1-2e36-4596-a36a-759dd3069c47
+	sourceLineageTag: [raw].[customer]
+
+	column CustomerKey
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: ed696f0c-ba41-4a58-980d-74ce2957c166
+		sourceLineageTag: CustomerKey
+		summarizeBy: none
+		sourceColumn: CustomerKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column Gender
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 466e1ece-d78e-460d-968e-b84590cf3121
+		sourceLineageTag: Gender
+		summarizeBy: none
+		sourceColumn: Gender
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: d0b5890d-6a31-4ddd-a549-376a7caa02b6
+		sourceLineageTag: Name
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Address
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 6a17e41a-d864-4472-8601-bee65a79ab21
+		sourceLineageTag: Address
+		summarizeBy: none
+		sourceColumn: Address
+
+		annotation SummarizationSetBy = Automatic
+
+	column City
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: ef248b15-62e6-4625-8e96-e2da683fd1c8
+		sourceLineageTag: City
+		summarizeBy: none
+		sourceColumn: City
+
+		annotation SummarizationSetBy = Automatic
+
+	column StateCode
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 7ffe326e-073e-46bc-bf20-662ff3d067d3
+		sourceLineageTag: StateCode
+		summarizeBy: none
+		sourceColumn: StateCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column State
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: e962bcb8-ce60-4317-9900-246806250e50
+		sourceLineageTag: State
+		summarizeBy: none
+		sourceColumn: State
+
+		annotation SummarizationSetBy = Automatic
+
+	column ZipCode
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 85783636-3117-45ab-92e0-ef7f2c516504
+		sourceLineageTag: ZipCode
+		summarizeBy: none
+		sourceColumn: ZipCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column CountryCode
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: c462e28d-07ba-437b-9fe9-5613a63e6645
+		sourceLineageTag: CountryCode
+		summarizeBy: none
+		sourceColumn: CountryCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column Country
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: b82c33df-d737-41bb-9080-fdb3dc592b05
+		sourceLineageTag: Country
+		summarizeBy: none
+		sourceColumn: Country
+
+		annotation SummarizationSetBy = Automatic
+
+	column Continent
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 7d323081-c19c-4bad-b35b-069d127d3b0f
+		sourceLineageTag: Continent
+		summarizeBy: none
+		sourceColumn: Continent
+
+		annotation SummarizationSetBy = Automatic
+
+	column Birthday
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: b056f7d7-ea36-4d24-be3a-cb8791aa8da1
+		sourceLineageTag: Birthday
+		summarizeBy: none
+		sourceColumn: Birthday
+
+		annotation SummarizationSetBy = Automatic
+
+	column Age
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 1f080acd-a21b-4f5f-b5b0-16c48d440796
+		sourceLineageTag: Age
+		summarizeBy: none
+		sourceColumn: Age
+
+		annotation SummarizationSetBy = Automatic
+
+	hierarchy 'Geography Hierarchy'
+		lineageTag: 8030452a-b504-4030-836e-c73b5b814e51
+
+		level Continent
+			lineageTag: 765ece07-c64e-4b05-ac2b-17e25c3a630c
+			column: Continent
+
+		level Country
+			lineageTag: 2893dc2e-e2d2-4f15-bb31-5ee591cb125d
+			column: Country
+
+		level City
+			lineageTag: dc36f408-cf5b-4cdb-b56d-d60e63e97a27
+			column: City
+
+		changedProperty = Name
+
+	partition customer = entity
+		mode: directLake
+		source
+			entityName: customer
+			schemaName: raw
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

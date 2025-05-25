@@ -1,0 +1,143 @@
+table sales
+	lineageTag: b9aeecc1-5137-4d49-af75-b2d149aecaf8
+	sourceLineageTag: [raw].[sales]
+
+	column OrderNumber
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 4b80975e-6c79-4830-b924-066bb8cbe54a
+		sourceLineageTag: OrderNumber
+		summarizeBy: none
+		sourceColumn: OrderNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column LineNumber
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 08110dbb-555e-4da0-9d43-71cbf2cc9fc2
+		sourceLineageTag: LineNumber
+		summarizeBy: none
+		sourceColumn: LineNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrderDate
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 25727cd0-cd08-40bd-9706-1f50460547be
+		sourceLineageTag: OrderDate
+		summarizeBy: none
+		sourceColumn: OrderDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column DeliveryDate
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 39423719-48b6-4934-a9f7-9dae917910e1
+		sourceLineageTag: DeliveryDate
+		summarizeBy: none
+		sourceColumn: DeliveryDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerKey
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 3559e4f1-e8f2-48db-a543-6f9f89c35482
+		sourceLineageTag: CustomerKey
+		summarizeBy: none
+		sourceColumn: CustomerKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column StoreKey
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 5751a6a1-deb5-4b2c-be80-fdd558553b8a
+		sourceLineageTag: StoreKey
+		summarizeBy: none
+		sourceColumn: StoreKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductKey
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 9aaaa946-413d-44a4-9298-a81028f07856
+		sourceLineageTag: ProductKey
+		summarizeBy: none
+		sourceColumn: ProductKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quantity
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 5d7e5b8b-f788-4c80-8f27-4fa3a5ff2156
+		sourceLineageTag: Quantity
+		summarizeBy: none
+		sourceColumn: Quantity
+
+		annotation SummarizationSetBy = Automatic
+
+	column UnitPrice
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 5859884b-5457-4057-a486-6d625879514c
+		sourceLineageTag: UnitPrice
+		summarizeBy: none
+		sourceColumn: UnitPrice
+
+		annotation SummarizationSetBy = Automatic
+
+	column NetPrice
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 29022e07-3aa1-4865-8cb0-97af6a70e2f0
+		sourceLineageTag: NetPrice
+		summarizeBy: none
+		sourceColumn: NetPrice
+
+		annotation SummarizationSetBy = Automatic
+
+	column UnitCost
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 18e0a469-8f87-412a-835f-17082877f1e3
+		sourceLineageTag: UnitCost
+		summarizeBy: none
+		sourceColumn: UnitCost
+
+		annotation SummarizationSetBy = Automatic
+
+	column CurrencyCode
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 0e891ae3-a5ed-45f7-ba5c-b4c2922c9f68
+		sourceLineageTag: CurrencyCode
+		summarizeBy: none
+		sourceColumn: CurrencyCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column ExchangeRate
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 3db1c383-e7dd-49d9-b79d-823bc06d532c
+		sourceLineageTag: ExchangeRate
+		summarizeBy: none
+		sourceColumn: ExchangeRate
+
+		annotation SummarizationSetBy = Automatic
+
+	partition sales = entity
+		mode: directLake
+		source
+			entityName: sales
+			schemaName: raw
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

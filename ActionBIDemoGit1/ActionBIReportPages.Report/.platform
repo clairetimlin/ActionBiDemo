@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "ActionBIReportPages"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "b9b56281-794f-98f3-4efa-09c6ed73db6e"
+  }
+}

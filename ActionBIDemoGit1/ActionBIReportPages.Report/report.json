@@ -1,0 +1,60 @@
+{
+  "config": "{\"version\":\"5.59\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU10\",\"version\":\"5.64\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":0,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"useEnhancedTooltips\":true,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY24SU10",
+            "path": "BaseThemes/CY24SU10.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Page 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "d0958439b516e4d6abb9",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"0acb746ff57724329e2a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":412.61235213804656,\"y\":140.98371940935533,\"z\":0,\"width\":284.78711320689774,\"height\":381.5959338679884,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Rows\":[{\"queryRef\":\"customer.Geography Hierarchy.Continent\",\"active\":true},{\"queryRef\":\"customer.Geography Hierarchy.Country\",\"active\":true}],\"Values\":[{\"queryRef\":\"MeasuresTable.SalesAmount\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"customer\",\"Type\":0},{\"Name\":\"m\",\"Entity\":\"MeasuresTable\",\"Type\":0}],\"Select\":[{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Hierarchy\":\"Geography Hierarchy\"}},\"Level\":\"Continent\"},\"Name\":\"customer.Geography Hierarchy.Continent\",\"NativeReferenceName\":\"Geography Hierarchy Continent\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Hierarchy\":\"Geography Hierarchy\"}},\"Level\":\"Country\"},\"Name\":\"customer.Geography Hierarchy.Country\",\"NativeReferenceName\":\"Geography Hierarchy Country\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"SalesAmount\"},\"Name\":\"MeasuresTable.SalesAmount\",\"NativeReferenceName\":\"SalesAmount\"}]},\"expansionStates\":[{\"roles\":[\"Rows\"],\"levels\":[{\"queryRefs\":[\"customer.Geography Hierarchy.Continent\"],\"isPinned\":true},{\"queryRefs\":[\"customer.Geography Hierarchy.Country\"],\"isCollapsed\":true,\"isPinned\":true}],\"root\":{\"identityValues\":null}}],\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 381.60,
+          "width": 284.79,
+          "x": 412.61,
+          "y": 140.98,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"ac6fd43823879de1fc5b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"width\":100,\"height\":40,\"z\":1000,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"actionButton\",\"drillFilterOtherVisuals\":true,\"objects\":{\"icon\":[{\"properties\":{\"shapeType\":{\"expr\":{\"Literal\":{\"Value\":\"'back'\"}}}},\"selector\":{\"id\":\"default\"}}]},\"vcObjects\":{\"visualLink\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"type\":{\"expr\":{\"Literal\":{\"Value\":\"'Back'\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 40.00,
+          "width": 100.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"bf45e5a9f79c4ccce4b6\",\"layouts\":[{\"id\":0,\"position\":{\"x\":770.710999437809,\"y\":140.98371940935533,\"z\":1001,\"width\":284.78711320689774,\"height\":268.80895834050415,\"tabOrder\":1001}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"MeasuresTable.SalesAmount\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"MeasuresTable\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"SalesAmount\"},\"Name\":\"MeasuresTable.SalesAmount\",\"NativeReferenceName\":\"SalesAmount\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"SalesAmount\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 268.81,
+          "width": 284.79,
+          "x": 770.71,
+          "y": 140.98,
+          "z": 1001.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}
