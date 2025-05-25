@@ -132,6 +132,17 @@ table sales
 
 		annotation SummarizationSetBy = Automatic
 
+	column AdjustedQuantity
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 5d7e5b8b-f788-4c80-8f27-4fa3a5ff2156
+		sourceLineageTag: AdjustedQuantity
+		summarizeBy: none
+		sourceColumn: AdjustedQuantity
+
+		annotation SummarizationSetBy = Automatic
+
+
 	partition sales = entity
 		mode: directLake
 		source
